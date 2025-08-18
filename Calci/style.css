@@ -1,60 +1,44 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+body{
+    background-color: rgb(239, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f2f2f2;
+#calculator{
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(35, 38, 59);
+    padding: 10px;
+    box-shadow: 4px 4px 10px;
+}
+.display{
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 5px;
+    background-color: rgb(232, 166, 250);
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    overflow: auto;
 }
 
-/* Calculator box */
-.calculator {
-  width: 250px;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 15px;
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    gap: 5px;
 }
-
-/* Display */
-.display {
-  width: 100%;
-  height: 40px;
-  font-size: 1.2rem;
-  text-align: right;
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #aaa;
+button{
+    height: 60px;
+    width: 70px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: azure;
 }
-
-/* Buttons grid */
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-}
-
-/* Button style */
-button.click {
-  height: 40px;
-  font-size: 1rem;
-  border: 1px solid #aaa;
-  background: #eee;
-  cursor: pointer;
-}
-
-button.click:hover {
-  background: #ddd;
-}
-
-/* Make "=" wider */
-button.equal {
-  grid-column: span 2;
-  background: #bbb;
+button:hover{
+    background-color: rgb(140, 3, 122);
 }
